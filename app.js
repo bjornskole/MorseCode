@@ -67,21 +67,6 @@ function app() {
 /*********************************************************************
  *                      Controller
  ********************************************************************/
-// function changeText({value}) {
-//     const arr = value.split("");
-//     const newArr= []
-//     let tempVal =""
-//     for(const key in morseCode) {
-//         for(val of arr) {
-//            key.toLowerCase() === val? (newArr.push(`${val}: ${morseCode[key]}</br>`), tempVal += `${morseCode[key]} `) : null
-          
-//         }
-//     }
-//     console.log(arr)
-//      outPutArr.innerHTML = newArr
-//      outPutHeader.innerText = tempVal
-//      app()
-// }
 function changeText({value}) {
     const arr = [...value];
     const newArr= []
