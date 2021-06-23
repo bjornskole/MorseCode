@@ -73,12 +73,12 @@ function changeText({value}) {
     let tempVal =""
         for(val of arr) {
             for(const key in morseCode) {
-           key.toLowerCase() === val? (newArr.push(`${val}: ${morseCode[key]}</br>`), tempVal += `${morseCode[key]} `) : null
+           key.toLowerCase() === val? (newArr.push(`${val.toUpperCase()}: <b>${morseCode[key]}</b></br>`), tempVal += `${morseCode[key]} `) : null
           
         }
     }
     console.log(arr)
-     outPutArr.innerHTML = newArr
+     outPutArr.innerHTML = newArr.join('')
      outPutHeader.innerText = tempVal
      app()
 }
