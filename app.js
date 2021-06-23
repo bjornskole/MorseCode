@@ -48,16 +48,17 @@ inputF.setAttribute("type", "text");
 inputF.setAttribute("onchange", "changeText(this)");
 inputF.innerText = "click";
 inputF.classList.add("inputF");
+
 //
+// Append
+main.append(h1);
+main.append(outPutHeader);
+main.append(outPutArr);
+main.append(inputF);
 // Render
 app();
 function app() {
-  const app = document.querySelector("#app");
-  app.append(main);
-  main.append(h1);
-  main.append(outPutHeader);
-  main.append(outPutArr);
-  main.append(inputF);
+  document.body.append(main);
 }
 
 /*********************************************************************
