@@ -41,7 +41,7 @@ const h1 = document.createElement("h1")
 h1.innerText= "Morse Code"
 //
 // Outout Field
-const outPutHeader = document.createElement("h3")
+const outPutHeader = document.createElement("h2")
 outPutHeader.innerText = "Translate to morse code here"
 const outPutArr = document.createElement("p")
 outPutArr.innerText = ""
