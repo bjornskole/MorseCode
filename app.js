@@ -37,7 +37,9 @@ main.classList.add("mainPage");
 // header
 const h1 = document.createElement("h1");
 h1.innerText = "Morse Code";
-// Outout Field
+// Output Field
+const outPutContainer = document.createElement("div");
+outPutContainer.classList.add("outputContainer");
 const outPutHeader = document.createElement("h2");
 outPutHeader.innerText = "Translate to morse code here";
 const outPutArr = document.createElement("p");
@@ -52,8 +54,9 @@ inputF.classList.add("inputF");
 //
 // Append
 main.append(h1);
-main.append(outPutHeader);
-main.append(outPutArr);
+main.append(outPutContainer);
+outPutContainer.append(outPutHeader);
+outPutContainer.append(outPutArr);
 main.append(inputF);
 // Render
 app();
