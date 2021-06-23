@@ -56,7 +56,7 @@ inputF.setAttribute("onchange", "changeText(this)");
 inputF.classList.add("inputF");
 
 /*
- *************append************
+ *************Append************
  */
 
 // main        Parent: body
@@ -69,7 +69,7 @@ outPutContainer.append(outPutHeader);
 // inputContainer Parent: main
 inputContainer.append(inputF);
 /*
- ****** Render
+ ***********Render************
  */
 app();
 function app() {
