@@ -31,6 +31,9 @@ const morseCode = {
 /*******************************************************************
  *                        View
  ********************************************************************/
+/*
+ ****************Create *****************
+ */
 // main page
 const main = document.createElement("div");
 main.classList.add("mainPage");
@@ -44,21 +47,30 @@ const outPutHeader = document.createElement("h2");
 outPutHeader.innerText = "Translate to morse code here";
 const outPutArr = document.createElement("p");
 outPutArr.innerText = "";
-// Input Field
+// Input Container
+const inputContainer = document.createElement("div");
+inputContainer.classList.add("inputContainer");
 const inputF = document.createElement("input");
 inputF.setAttribute("type", "text");
 inputF.setAttribute("onchange", "changeText(this)");
-inputF.innerText = "click";
 inputF.classList.add("inputF");
 
-//
-// Append
+/*
+ *************append************
+ */
+
+// main        Parent: body
 main.append(h1);
 main.append(outPutContainer);
-outPutContainer.append(outPutHeader);
+main.append(inputContainer);
+//outputContainer Parent: main
 outPutContainer.append(outPutArr);
-main.append(inputF);
-// Render
+outPutContainer.append(outPutHeader);
+// inputContainer
+inputContainer.append(inputF);
+/*
+ ****** Render
+ */
 app();
 function app() {
   document.body.append(main);
