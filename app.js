@@ -74,9 +74,8 @@ function app() {
 /*********************************************************************
  *                      Controller
  ********************************************************************/
-function changeText(e) {
-  let value = e.target.value;
-  console.log(value);
+function changeText({ target }) {
+  const { value } = target;
   const arr = [...value];
   const newArr = [];
   let tempVal = "";
