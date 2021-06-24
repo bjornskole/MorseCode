@@ -40,34 +40,28 @@ main.classList.add("mainPage");
 // header
 const h1 = document.createElement("h1");
 h1.innerText = "Morse Code";
-// Output Field
+main.append(h1);
+// Output Container
 const outPutContainer = document.createElement("div");
 outPutContainer.classList.add("outputContainer");
+main.append(outPutContainer);
+// output Header
 const outPutHeader = document.createElement("h2");
 outPutHeader.innerText = "Translate to morse code here";
+outPutContainer.append(outPutHeader);
+// output array
 const outPutArr = document.createElement("p");
 outPutArr.innerText = "";
+outPutContainer.append(outPutArr);
 // Input Container
 const inputContainer = document.createElement("div");
 inputContainer.classList.add("inputContainer");
-const inputF = document.createElement("input");
-inputF.setAttribute("type", "text");
-inputF.setAttribute("onchange", "changeText(this)");
-inputF.classList.add("inputF");
-
-/*
- *************Append************
- */
-
-// main        Parent: body
-main.append(h1);
-main.append(outPutContainer);
 main.append(inputContainer);
-//outputContainer Parent: main
-outPutContainer.append(outPutArr);
-outPutContainer.append(outPutHeader);
-// inputContainer Parent: main
+// input field
+const inputF = document.createElement("input");
+inputF.classList.add("inputF");
 inputContainer.append(inputF);
+
 /*
  ***********Render************
  */
@@ -79,7 +73,9 @@ function app() {
 /*********************************************************************
  *                      Controller
  ********************************************************************/
-function changeText({ value }) {
+function changeText(e) {
+  let value = e.target.value;
+  console.log(value);
   const arr = [...value];
   const newArr = [];
   let tempVal = "";
@@ -93,5 +89,8 @@ function changeText({ value }) {
   }
   outPutArr.innerHTML = newArr.join("");
   outPutHeader.innerText = tempVal;
+  inputF.value = "";
   app();
 }
+
+inputF.addEventListener("change", changeText);
