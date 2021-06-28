@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<title>Test Suite</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.15.0.css" />
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.15.0.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script>
+    // Test calcColor
+    QUnit.test("test of MorseCode", function (assert) {
+      let val = { target: { value: "hello" } };
+      let tempVal;
+
+      let actual = changeText(val);
+      let expected = tempVal;
+
+      assert.deepEqual(actual, expected, "");
+    });
+
+    function app() {}
+  </script>
+</body>
